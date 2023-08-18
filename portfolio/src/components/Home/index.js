@@ -3,7 +3,8 @@ import { Link } from 'react-router-dom';
 import {useState, useEffect} from 'react';
 import './index.scss'
 import AnimatedLetters from '../AnimatedLetters'
-import Logo from '../Logo'
+//import Logo from '../Logo'
+import Loader from 'react-loaders'
 
 
 const Home = () => {
@@ -19,6 +20,7 @@ useEffect(() => {
 }, [])
 
   return (
+    <>
     <div className="container home-page">
       <div className="text-zone">
       
@@ -42,8 +44,10 @@ useEffect(() => {
         <h2> Fully trained junior full-stack developer / ex Data Analyst</h2>
         <Link to='/contact' className='flat-button'> Contact Me </Link>
       </div>
-      <Logo/>
+      {/* <Logo/> */}
     </div>
+    <Loader type='pacman'/>
+    </>
     
   );
 }
